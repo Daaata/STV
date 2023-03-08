@@ -6,7 +6,9 @@ import org.junit.Test;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -49,6 +51,17 @@ public class GeoHashTest {
         CoverageLongs cl = GeoHash.coverBoundingBoxLongs(0.1,0.1,0.1,0.1,1);
         int length = cl.getHashLength();
         assertEquals(1,length);
+    }
+
+    @Test
+    public void encodeHash() throws Exception {
+        String line = GeoHash.encodeHash(1,1,2);
+        assertEquals("s0", line);
+    }
+
+    @Test
+    public void hashContains() throws Exception {
+        assertEquals(true,GeoHash.hashContains("s0",1,1));
     }
 
 }
