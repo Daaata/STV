@@ -3,9 +3,55 @@ package com.github.davidmoten.geo;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.Assert.*;
 
+@RunWith(Parameterized.class)
+public class LatLongTest {
+    public double lat, lon;
+    public LatLong latlong;
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][]{{0,0},{-1,0},{0,-1},{-1,-1},{1,0},{0,1},{1,1},{-1,1},{1,-1}});
+    }
+
+    public LatLongTest(double la, double lo) {
+        this.lat = la;
+        this.lon = lo;
+        this.latlong = new LatLong(la,lo);
+    }
+
+    @Test
+    public void getLat() throws Exception {
+        assertEquals(lat,latlong.getLat(),0.001);
+    }
+
+    @Test
+    public void getLon() throws Exception {
+        assertEquals(lon,latlong.getLon(),0.001);
+    }
+
+    @Test
+    public void add() throws Exception {
+        latlong = latlong.add(lon,lat);
+        assertEquals(lat+lon,latlong.getLat(),0.001);
+        assertEquals(lon+lat,latlong.getLon(),0.001);
+    }
+
+    @Test
+    public void getString() throws Exception {
+        String text = latlong.toString();
+        assertEquals("LatLong [lat="+lat+", lon="+lon+"]", text);
+    }
+}
+
+/* // Lab 1
 public class LatLongTest {
 
     @Before
@@ -41,3 +87,4 @@ public class LatLongTest {
     }
 
 }
+ */
