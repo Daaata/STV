@@ -65,6 +65,18 @@ public class CoverageTest {
     }
 
     @Test
+    public void getHashLengthUseGraph() throws Exception {
+        Set<String> word = new HashSet<String>();
+        Coverage c = new Coverage(word, 0);
+        int length = c.getHashLength();
+        assertEquals(0,length);
+        word.add("29jw");
+        c = new Coverage(word, 4);
+        length = c.getHashLength();
+        assertEquals(4,length);
+    }
+
+    @Test
     public void TesttoString() throws Exception {
         Set<String> word = new HashSet<String>();
         word.add("Katayama");

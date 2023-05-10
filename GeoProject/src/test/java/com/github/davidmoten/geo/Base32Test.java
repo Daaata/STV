@@ -20,6 +20,10 @@ public class Base32Test {
         assertEquals("29jw", encode);
         encode = Base32.encodeBase32(-75324, 4);
         assertEquals("-29jw", encode);
+        encode = Base32.encodeBase32(16, 1);
+        assertEquals("h", encode);
+        encode = Base32.encodeBase32(-16, 1);
+        assertEquals("-h", encode);
         encode = Base32.encodeBase32(75324, 8);
         assertEquals("000029jw", encode);
         encode = Base32.encodeBase32(-75324, 8);
@@ -44,6 +48,12 @@ public class Base32Test {
     public void getCharIndex() throws Exception {
         assertEquals(0,Base32.getCharIndex('0'));
         Base32.getCharIndex('A');
+    }
+
+    @Test
+    public void padLeftWithZerosToLength() throws Exception {
+        assertEquals("29jw",Base32.padLeftWithZerosToLength("29jw",4));
+        assertEquals("029jw",Base32.padLeftWithZerosToLength("29jw",5));
     }
 }
 

@@ -45,6 +45,9 @@ public class GeoHashTest {
 
     @Test
     public void coverBoundingBoxLongs() throws Exception {
+        GeoHash.coverBoundingBox(0,0,0,0);
+        GeoHash.coverBoundingBox(0,0,0,0,1);
+        GeoHash.gridAsString("",0,0,0,0);
         assertEquals(length,coveragelongs.getHashLength());
     }
 
@@ -159,6 +162,28 @@ public class GeoHashTest {
         assertEquals("29jt", GeoHash.bottom("29jw"));
         assertEquals("-29jq", GeoHash.bottom("-29jw"));
         GeoHash.bottom("");
+    }
+
+    @Test
+    public void fromLongToString() throws Exception {
+        try{
+            GeoHash.fromLongToString(12);
+        }catch(IllegalArgumentException e){
+            assertEquals(e.getMessage(),"invalid long geohash 12");
+        }
+        try{
+            GeoHash.fromLongToString(0);
+        }catch(IllegalArgumentException e){
+            assertEquals(e.getMessage(),"invalid long geohash 0");
+        }
+        String s = GeoHash.fromLongToString(1);
+        assertEquals(s,"0");
+    }
+
+    @Test
+    public void heightDegrees() throws Exception {
+        assertEquals(180, GeoHash.heightDegrees(0), 0.001);
+        assertEquals(0, GeoHash.heightDegrees(13), 0.001);
     }
 }
 
