@@ -1,0 +1,12 @@
+version: '2'
+services:
+  keystonejs:
+    image: ntutselab/keystonejs
+    ports:
+     - "3000:3000"
+    links:
+     - mongodb
+  mongodb:
+    image: mongo:5.0
+    ports:
+     - "27017:27017"
