@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230613 10:19:24.183" rpa="false" schemaversion="3">
+<suite id="s1" name="keystoneJS tests" source="D:\STV\docker_test\RobotFramework_new\tests\keystoneJS_tests.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Keystonejs</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Keystonejs" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230613 10:19:24.517" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:3000/keystone/signin'.</msg>
+<msg timestamp="20230613 10:19:24.536" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230613 10:19:24.516" endtime="20230613 10:19:27.597"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230613 10:19:27.597" endtime="20230613 10:19:27.727"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:19:27.727" endtime="20230613 10:19:27.728"/>
+</kw>
+<status status="PASS" starttime="20230613 10:19:24.516" endtime="20230613 10:19:27.728"/>
+</kw>
+<status status="PASS" starttime="20230613 10:19:24.516" endtime="20230613 10:19:27.728"/>
+</kw>
+<test id="s1-t1" name="Create Post Test" line="16">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:27.730" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:19:27.730" endtime="20230613 10:19:30.914"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:30.915" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:19:30.914" endtime="20230613 10:19:34.040"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:34.040" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:19:34.040" endtime="20230613 10:19:39.158"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:19:39.158" endtime="20230613 10:19:39.158"/>
+</kw>
+<status status="PASS" starttime="20230613 10:19:27.729" endtime="20230613 10:19:39.158"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:39.160" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:19:39.159" endtime="20230613 10:19:42.292"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:19:42.292" endtime="20230613 10:19:42.292"/>
+</kw>
+<status status="PASS" starttime="20230613 10:19:39.159" endtime="20230613 10:19:42.292"/>
+</kw>
+<kw name="Create Action" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-h629qq</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:42.294" level="INFO">Clicking button 'class=css-h629qq'.</msg>
+<status status="PASS" starttime="20230613 10:19:42.293" endtime="20230613 10:19:47.429"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=css-foh633</arg>
+<arg>${Test String}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:47.430" level="INFO">Typing text 'Test' into text field 'class=css-foh633'.</msg>
+<status status="PASS" starttime="20230613 10:19:47.429" endtime="20230613 10:19:50.608"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[.//text() = 'Create']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:50.609" level="INFO">Clicking button '//button[.//text() = 'Create']'.</msg>
+<status status="PASS" starttime="20230613 10:19:50.608" endtime="20230613 10:19:55.723"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:19:55.723" endtime="20230613 10:19:55.723"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:19:55.724" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:19:55.723" endtime="20230613 10:20:00.859"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:20:00.859" endtime="20230613 10:20:00.859"/>
+</kw>
+<status status="PASS" starttime="20230613 10:19:42.293" endtime="20230613 10:20:00.859"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-ctpeu</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:02.896" level="INFO">${Result} = Your changes have been saved successfully</msg>
+<status status="PASS" starttime="20230613 10:20:00.860" endtime="20230613 10:20:02.896"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${isSuccess}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:20:02.897" endtime="20230613 10:20:02.898"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:02.899" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:20:02.899" endtime="20230613 10:20:06.077"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:02.898" endtime="20230613 10:20:06.077"/>
+</kw>
+<status status="PASS" starttime="20230613 10:19:27.728" endtime="20230613 10:20:06.078"/>
+</test>
+<test id="s1-t2" name="Search Post Test" line="24">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:06.081" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:20:06.080" endtime="20230613 10:20:09.202"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:09.203" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:20:09.202" endtime="20230613 10:20:12.295"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:12.300" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:20:12.295" endtime="20230613 10:20:17.405"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:20:17.405" endtime="20230613 10:20:17.405"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:06.080" endtime="20230613 10:20:17.405"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:17.407" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:20:17.406" endtime="20230613 10:20:20.493"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:20:20.493" endtime="20230613 10:20:20.493"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:17.406" endtime="20230613 10:20:20.494"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=css-foh633</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:20.495" level="INFO">Typing text 'Test' into text field 'class=css-foh633'.</msg>
+<status status="PASS" starttime="20230613 10:20:20.494" endtime="20230613 10:20:23.632"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:20:24.839" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:20:23.633" endtime="20230613 10:20:24.839"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>xpath=//*[@id="react-root"]/div/main/div/div/div[3]/div/div/table/tbody/tr/td[2]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:26.889" level="INFO">${Result} = Test</msg>
+<status status="PASS" starttime="20230613 10:20:24.840" endtime="20230613 10:20:26.889"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230613 10:20:26.890" endtime="20230613 10:20:26.890"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${result}</arg>
+<arg>Test</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:20:26.891" endtime="20230613 10:20:26.891"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:26.892" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:20:26.892" endtime="20230613 10:20:30.059"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:26.892" endtime="20230613 10:20:30.059"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:06.079" endtime="20230613 10:20:30.060"/>
+</test>
+<test id="s1-t3" name="Edit Post Test" line="34">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:30.062" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:20:30.062" endtime="20230613 10:20:33.165"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:33.166" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:20:33.165" endtime="20230613 10:20:36.269"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:36.269" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:20:36.269" endtime="20230613 10:20:41.367"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:20:41.367" endtime="20230613 10:20:41.367"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:30.061" endtime="20230613 10:20:41.367"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:41.369" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:20:41.368" endtime="20230613 10:20:44.457"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:20:44.457" endtime="20230613 10:20:44.457"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:41.368" endtime="20230613 10:20:44.457"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Test</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:44.458" level="INFO">Clicking link 'link=Test'.</msg>
+<status status="PASS" starttime="20230613 10:20:44.458" endtime="20230613 10:20:47.573"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:20:48.780" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:20:47.574" endtime="20230613 10:20:48.780"/>
+</kw>
+<kw name="Input Action" library="resource">
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=keystone-html-0_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230613 10:20:48.781" level="INFO">Selecting frame 'id=keystone-html-0_ifr'.</msg>
+<status status="PASS" starttime="20230613 10:20:48.781" endtime="20230613 10:20:50.827"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="tinymce"]/p</arg>
+<arg>${Test String}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:50.828" level="INFO">Typing text 'Test' into text field '//*[@id="tinymce"]/p'.</msg>
+<status status="PASS" starttime="20230613 10:20:50.827" endtime="20230613 10:20:53.966"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230613 10:20:53.966" endtime="20230613 10:20:54.979"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:20:54.980" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:20:54.979" endtime="20230613 10:21:00.133"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:21:00.133" endtime="20230613 10:21:00.134"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:48.780" endtime="20230613 10:21:00.134"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-ctpeu</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:02.181" level="INFO">${Result} = Your changes have been saved successfully</msg>
+<status status="PASS" starttime="20230613 10:21:00.134" endtime="20230613 10:21:02.181"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${isSuccess}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:21:02.182" endtime="20230613 10:21:02.182"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:02.185" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:21:02.184" endtime="20230613 10:21:05.367"/>
+</kw>
+<status status="PASS" starttime="20230613 10:21:02.183" endtime="20230613 10:21:05.367"/>
+</kw>
+<status status="PASS" starttime="20230613 10:20:30.061" endtime="20230613 10:21:05.372"/>
+</test>
+<test id="s1-t4" name="Create Comment Test" line="44">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:05.376" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:21:05.375" endtime="20230613 10:21:08.513"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:08.514" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:21:08.513" endtime="20230613 10:21:11.626"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:11.627" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:21:11.626" endtime="20230613 10:21:16.731"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:21:16.731" endtime="20230613 10:21:16.732"/>
+</kw>
+<status status="PASS" starttime="20230613 10:21:05.375" endtime="20230613 10:21:16.732"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:16.734" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:21:16.733" endtime="20230613 10:21:19.914"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:21:19.914" endtime="20230613 10:21:19.914"/>
+</kw>
+<status status="PASS" starttime="20230613 10:21:16.732" endtime="20230613 10:21:19.914"/>
+</kw>
+<kw name="Click to Comment Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Comments</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:19.916" level="INFO">Clicking link 'link=Comments'.</msg>
+<status status="PASS" starttime="20230613 10:21:19.915" endtime="20230613 10:21:23.038"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:21:23.038" endtime="20230613 10:21:23.038"/>
+</kw>
+<status status="PASS" starttime="20230613 10:21:19.915" endtime="20230613 10:21:23.039"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-h629qq</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:23.041" level="INFO">Clicking button 'class=css-h629qq'.</msg>
+<status status="PASS" starttime="20230613 10:21:23.039" endtime="20230613 10:21:28.182"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:21:29.385" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:21:28.183" endtime="20230613 10:21:29.385"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[@class="Select-arrow-zone"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:29.386" level="INFO">Clicking element '//span[@class="Select-arrow-zone"]'.</msg>
+<status status="PASS" starttime="20230613 10:21:29.386" endtime="20230613 10:21:31.470"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=Select-menu-outer</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:31.471" level="INFO">Clicking element 'class=Select-menu-outer'.</msg>
+<status status="PASS" starttime="20230613 10:21:31.470" endtime="20230613 10:21:33.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:21:34.736" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:21:33.526" endtime="20230613 10:21:34.736"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:34.737" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/span'.</msg>
+<status status="PASS" starttime="20230613 10:21:34.737" endtime="20230613 10:21:36.807"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=Select-menu-outer</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:36.808" level="INFO">Clicking element 'class=Select-menu-outer'.</msg>
+<status status="PASS" starttime="20230613 10:21:36.808" endtime="20230613 10:21:38.869"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/div/div/div/div/form/div[3]/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:38.870" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/div/div/form/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20230613 10:21:38.869" endtime="20230613 10:21:43.979"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:21:45.182" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:21:43.980" endtime="20230613 10:21:45.182"/>
+</kw>
+<kw name="Input Action" library="resource">
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=keystone-html-0_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230613 10:21:45.184" level="INFO">Selecting frame 'id=keystone-html-0_ifr'.</msg>
+<status status="PASS" starttime="20230613 10:21:45.183" endtime="20230613 10:21:47.228"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="tinymce"]/p</arg>
+<arg>${Test String}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:47.229" level="INFO">Typing text 'Test' into text field '//*[@id="tinymce"]/p'.</msg>
+<status status="PASS" starttime="20230613 10:21:47.228" endtime="20230613 10:21:50.344"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230613 10:21:50.344" endtime="20230613 10:21:51.362"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:51.362" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:21:51.362" endtime="20230613 10:21:56.584"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:21:56.584" endtime="20230613 10:21:56.585"/>
+</kw>
+<status status="PASS" starttime="20230613 10:21:45.183" endtime="20230613 10:21:56.585"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-ctpeu</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:58.630" level="INFO">${Result} = Your changes have been saved successfully</msg>
+<status status="PASS" starttime="20230613 10:21:56.585" endtime="20230613 10:21:58.630"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${isSuccess}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:21:58.631" endtime="20230613 10:21:58.631"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230613 10:21:58.631" endtime="20230613 10:21:58.632"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:21:58.633" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:21:58.633" endtime="20230613 10:22:01.836"/>
+</kw>
+<status status="PASS" starttime="20230613 10:21:58.632" endtime="20230613 10:22:01.836"/>
+</kw>
+<status status="PASS" starttime="20230613 10:21:05.374" endtime="20230613 10:22:01.837"/>
+</test>
+<test id="s1-t5" name="Edit Comment Test" line="63">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:01.840" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:22:01.839" endtime="20230613 10:22:04.973"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:04.974" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:22:04.973" endtime="20230613 10:22:08.087"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:08.088" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:22:08.087" endtime="20230613 10:22:13.177"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:22:13.177" endtime="20230613 10:22:13.177"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:01.839" endtime="20230613 10:22:13.178"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:13.179" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:22:13.179" endtime="20230613 10:22:16.268"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:22:16.268" endtime="20230613 10:22:16.268"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:13.178" endtime="20230613 10:22:16.268"/>
+</kw>
+<kw name="Click to Comment Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Comments</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:16.270" level="INFO">Clicking link 'link=Comments'.</msg>
+<status status="PASS" starttime="20230613 10:22:16.269" endtime="20230613 10:22:19.351"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:22:19.351" endtime="20230613 10:22:19.351"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:16.269" endtime="20230613 10:22:19.351"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="react-root"]/div/main/div/div/div[3]/div/div/table/tbody/tr/td[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:19.353" level="INFO">Clicking element 'xpath=//*[@id="react-root"]/div/main/div/div/div[3]/div/div/table/tbody/tr/td[2]/a'.</msg>
+<status status="PASS" starttime="20230613 10:22:19.352" endtime="20230613 10:22:21.431"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:22:22.647" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:22:21.431" endtime="20230613 10:22:22.647"/>
+</kw>
+<kw name="Input Action" library="resource">
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>id=keystone-html-0_ifr</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230613 10:22:22.648" level="INFO">Selecting frame 'id=keystone-html-0_ifr'.</msg>
+<status status="PASS" starttime="20230613 10:22:22.648" endtime="20230613 10:22:24.691"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="tinymce"]/p</arg>
+<arg>${Test String}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:24.693" level="INFO">Typing text 'Test' into text field '//*[@id="tinymce"]/p'.</msg>
+<status status="PASS" starttime="20230613 10:22:24.691" endtime="20230613 10:22:27.798"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230613 10:22:27.798" endtime="20230613 10:22:28.804"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:28.804" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:22:28.804" endtime="20230613 10:22:33.938"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:22:33.938" endtime="20230613 10:22:33.939"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:22.647" endtime="20230613 10:22:33.939"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-ctpeu</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:35.976" level="INFO">${Result} = Your changes have been saved successfully</msg>
+<status status="PASS" starttime="20230613 10:22:33.939" endtime="20230613 10:22:35.976"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${isSuccess}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:22:35.977" endtime="20230613 10:22:35.977"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230613 10:22:35.977" endtime="20230613 10:22:35.978"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:35.980" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:22:35.979" endtime="20230613 10:22:39.156"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:35.978" endtime="20230613 10:22:39.156"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:01.838" endtime="20230613 10:22:39.157"/>
+</test>
+<test id="s1-t6" name="Create Category Test" line="75">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:39.160" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:22:39.159" endtime="20230613 10:22:42.279"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:42.280" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:22:42.279" endtime="20230613 10:22:45.383"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:45.384" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:22:45.383" endtime="20230613 10:22:50.491"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:22:50.491" endtime="20230613 10:22:50.491"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:39.159" endtime="20230613 10:22:50.492"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:50.493" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:22:50.493" endtime="20230613 10:22:53.599"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:22:53.599" endtime="20230613 10:22:53.599"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:50.492" endtime="20230613 10:22:53.600"/>
+</kw>
+<kw name="Click to Category Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Categories</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:53.602" level="INFO">Clicking link 'link=Categories'.</msg>
+<status status="PASS" starttime="20230613 10:22:53.601" endtime="20230613 10:22:56.776"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:22:56.776" endtime="20230613 10:22:56.776"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:53.600" endtime="20230613 10:22:56.776"/>
+</kw>
+<kw name="Create Action" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-h629qq</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:22:56.778" level="INFO">Clicking button 'class=css-h629qq'.</msg>
+<status status="PASS" starttime="20230613 10:22:56.777" endtime="20230613 10:23:01.936"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=css-foh633</arg>
+<arg>${Test String}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:01.937" level="INFO">Typing text 'Test' into text field 'class=css-foh633'.</msg>
+<status status="PASS" starttime="20230613 10:23:01.936" endtime="20230613 10:23:05.030"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[.//text() = 'Create']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:05.030" level="INFO">Clicking button '//button[.//text() = 'Create']'.</msg>
+<status status="PASS" starttime="20230613 10:23:05.030" endtime="20230613 10:23:10.136"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:23:10.136" endtime="20230613 10:23:10.136"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:10.137" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:23:10.136" endtime="20230613 10:23:15.268"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:23:15.268" endtime="20230613 10:23:15.268"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:56.777" endtime="20230613 10:23:15.269"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-ctpeu</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:17.303" level="INFO">${Result} = Your changes have been saved successfully</msg>
+<status status="PASS" starttime="20230613 10:23:15.269" endtime="20230613 10:23:17.303"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${isSuccess}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:23:17.304" endtime="20230613 10:23:17.304"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:17.305" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:23:17.305" endtime="20230613 10:23:20.485"/>
+</kw>
+<status status="PASS" starttime="20230613 10:23:17.305" endtime="20230613 10:23:20.485"/>
+</kw>
+<status status="PASS" starttime="20230613 10:22:39.158" endtime="20230613 10:23:20.486"/>
+</test>
+<test id="s1-t7" name="Show Posts in Blog Page When Categories is Test Test" line="84">
+<kw name="Open Blog Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230613 10:23:20.489" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:3000/blog/test'.</msg>
+<msg timestamp="20230613 10:23:20.530" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230613 10:23:20.489" endtime="20230613 10:23:24.146"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230613 10:23:24.146" endtime="20230613 10:23:25.282"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:23:25.282" endtime="20230613 10:23:25.282"/>
+</kw>
+<status status="PASS" starttime="20230613 10:23:20.488" endtime="20230613 10:23:25.282"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>class=col-sm-8</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:27.324" level="INFO">${result} = No posts in the category Test.</msg>
+<status status="PASS" starttime="20230613 10:23:25.283" endtime="20230613 10:23:27.324"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${result}</arg>
+<arg>${CategoryIsNoPost}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:23:27.325" endtime="20230613 10:23:27.325"/>
+</kw>
+<kw name="Open Keystonejs" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230613 10:23:27.327" level="INFO">Opening browser 'Chrome' to base url 'http://127.0.0.1:3000/keystone/signin'.</msg>
+<msg timestamp="20230613 10:23:27.337" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230613 10:23:27.326" endtime="20230613 10:23:30.660"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230613 10:23:30.660" endtime="20230613 10:23:31.795"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:23:31.795" endtime="20230613 10:23:31.795"/>
+</kw>
+<status status="PASS" starttime="20230613 10:23:27.326" endtime="20230613 10:23:31.796"/>
+</kw>
+<status status="PASS" starttime="20230613 10:23:20.487" endtime="20230613 10:23:31.797"/>
+</test>
+<test id="s1-t8" name="Create Gallery Test" line="90">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:31.802" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:23:31.801" endtime="20230613 10:23:35.115"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:35.116" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:23:35.115" endtime="20230613 10:23:38.242"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:38.243" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:23:38.242" endtime="20230613 10:23:43.330"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:23:43.330" endtime="20230613 10:23:43.330"/>
+</kw>
+<status status="PASS" starttime="20230613 10:23:31.801" endtime="20230613 10:23:43.330"/>
+</kw>
+<kw name="Click to Gallery Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Galleries</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:43.332" level="INFO">Clicking link 'link=Galleries'.</msg>
+<status status="PASS" starttime="20230613 10:23:43.331" endtime="20230613 10:23:46.445"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:23:46.445" endtime="20230613 10:23:46.445"/>
+</kw>
+<status status="PASS" starttime="20230613 10:23:43.331" endtime="20230613 10:23:46.445"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-h629qq</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:46.447" level="INFO">Clicking button 'class=css-h629qq'.</msg>
+<status status="PASS" starttime="20230613 10:23:46.446" endtime="20230613 10:23:51.540"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:23:52.743" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:23:51.540" endtime="20230613 10:23:52.743"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=css-foh633</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:52.744" level="INFO">Typing text 'Test' into text field 'class=css-foh633'.</msg>
+<status status="PASS" starttime="20230613 10:23:52.744" endtime="20230613 10:23:55.827"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:23:57.033" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:23:55.828" endtime="20230613 10:23:57.033"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/div/div/div/div/form/div[3]/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:23:57.034" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div/div/div/form/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20230613 10:23:57.033" endtime="20230613 10:24:02.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:24:03.351" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:24:02.147" endtime="20230613 10:24:03.351"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:03.352" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:24:03.352" endtime="20230613 10:24:08.467"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:24:09.669" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:24:08.468" endtime="20230613 10:24:09.669"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-ctpeu</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:11.711" level="INFO">${Result} = Your changes have been saved successfully</msg>
+<status status="PASS" starttime="20230613 10:24:09.669" endtime="20230613 10:24:11.711"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${isSuccess}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:24:11.712" endtime="20230613 10:24:11.712"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:11.723" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:24:11.723" endtime="20230613 10:24:14.911"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:11.712" endtime="20230613 10:24:14.911"/>
+</kw>
+<status status="PASS" starttime="20230613 10:23:31.799" endtime="20230613 10:24:14.912"/>
+</test>
+<test id="s1-t9" name="Delete Gallery Test" line="105">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:14.915" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:24:14.914" endtime="20230613 10:24:18.037"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:18.038" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:24:18.037" endtime="20230613 10:24:21.146"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:21.147" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:24:21.146" endtime="20230613 10:24:26.250"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:24:26.250" endtime="20230613 10:24:26.250"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:14.914" endtime="20230613 10:24:26.250"/>
+</kw>
+<kw name="Click to Gallery Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Galleries</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:26.252" level="INFO">Clicking link 'link=Galleries'.</msg>
+<status status="PASS" starttime="20230613 10:24:26.251" endtime="20230613 10:24:37.880"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:24:37.880" endtime="20230613 10:24:37.880"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:26.251" endtime="20230613 10:24:37.881"/>
+</kw>
+<kw name="Delete Action" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=ItemList__control--delete</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:37.883" level="INFO">Clicking button 'class=ItemList__control--delete'.</msg>
+<status status="PASS" starttime="20230613 10:24:37.882" endtime="20230613 10:24:43.018"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:24:43.018" endtime="20230613 10:24:43.018"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-t4884</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:43.020" level="INFO">Clicking button 'class=css-t4884'.</msg>
+<status status="PASS" starttime="20230613 10:24:43.019" endtime="20230613 10:24:48.128"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:24:48.128" endtime="20230613 10:24:48.128"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:37.881" endtime="20230613 10:24:48.128"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-pbviij</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:50.175" level="INFO">${Result} = No albums found...</msg>
+<status status="PASS" starttime="20230613 10:24:48.129" endtime="20230613 10:24:50.175"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${AlbumIsEmpty}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:24:50.176" endtime="20230613 10:24:50.177"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:50.178" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:24:50.177" endtime="20230613 10:24:53.343"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:50.177" endtime="20230613 10:24:53.343"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:14.913" endtime="20230613 10:24:53.344"/>
+</test>
+<test id="s1-t10" name="Delete Category Test" line="113">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:53.347" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:24:53.346" endtime="20230613 10:24:56.503"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:56.504" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:24:56.503" endtime="20230613 10:24:59.601"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:24:59.602" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:24:59.601" endtime="20230613 10:25:04.690"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:04.690" endtime="20230613 10:25:04.691"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:53.346" endtime="20230613 10:25:04.691"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:04.693" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:25:04.692" endtime="20230613 10:25:07.854"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:07.854" endtime="20230613 10:25:07.854"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:04.691" endtime="20230613 10:25:07.854"/>
+</kw>
+<kw name="Click to Category Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Categories</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:07.856" level="INFO">Clicking link 'link=Categories'.</msg>
+<status status="PASS" starttime="20230613 10:25:07.855" endtime="20230613 10:25:10.976"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:10.976" endtime="20230613 10:25:10.987"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:07.855" endtime="20230613 10:25:10.987"/>
+</kw>
+<kw name="Delete Action" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=ItemList__control--delete</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:10.989" level="INFO">Clicking button 'class=ItemList__control--delete'.</msg>
+<status status="PASS" starttime="20230613 10:25:10.988" endtime="20230613 10:25:16.107"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:16.107" endtime="20230613 10:25:16.107"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-t4884</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:16.108" level="INFO">Clicking button 'class=css-t4884'.</msg>
+<status status="PASS" starttime="20230613 10:25:16.107" endtime="20230613 10:25:21.225"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:21.225" endtime="20230613 10:25:21.226"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:10.988" endtime="20230613 10:25:21.226"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-pbviij</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:23.254" level="INFO">${Result} = No categories found...</msg>
+<status status="PASS" starttime="20230613 10:25:21.226" endtime="20230613 10:25:23.254"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${CategoryIsEmpty}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:25:23.254" endtime="20230613 10:25:23.255"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:23.256" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:25:23.256" endtime="20230613 10:25:26.452"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:23.255" endtime="20230613 10:25:26.452"/>
+</kw>
+<status status="PASS" starttime="20230613 10:24:53.345" endtime="20230613 10:25:26.453"/>
+</test>
+<test id="s1-t11" name="Delete Comment Test" line="122">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:26.456" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:25:26.455" endtime="20230613 10:25:29.598"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:29.599" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:25:29.598" endtime="20230613 10:25:32.725"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:32.726" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:25:32.725" endtime="20230613 10:25:37.825"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:37.825" endtime="20230613 10:25:37.825"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:26.455" endtime="20230613 10:25:37.825"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:37.827" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:25:37.827" endtime="20230613 10:25:40.961"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:40.961" endtime="20230613 10:25:40.961"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:37.826" endtime="20230613 10:25:40.961"/>
+</kw>
+<kw name="Click to Comment Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Comments</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:40.963" level="INFO">Clicking link 'link=Comments'.</msg>
+<status status="PASS" starttime="20230613 10:25:40.962" endtime="20230613 10:25:44.073"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:44.073" endtime="20230613 10:25:44.073"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:40.962" endtime="20230613 10:25:44.074"/>
+</kw>
+<kw name="Delete Action" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=ItemList__control--delete</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:44.075" level="INFO">Clicking button 'class=ItemList__control--delete'.</msg>
+<status status="PASS" starttime="20230613 10:25:44.075" endtime="20230613 10:25:49.190"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:49.190" endtime="20230613 10:25:49.190"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-t4884</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:49.191" level="INFO">Clicking button 'class=css-t4884'.</msg>
+<status status="PASS" starttime="20230613 10:25:49.190" endtime="20230613 10:25:54.289"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:25:54.289" endtime="20230613 10:25:54.289"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:44.074" endtime="20230613 10:25:54.289"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-pbviij</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:56.317" level="INFO">${Result} = No comments found...</msg>
+<status status="PASS" starttime="20230613 10:25:54.290" endtime="20230613 10:25:56.317"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${CommentIsEmpty}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:25:56.317" endtime="20230613 10:25:56.317"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:56.318" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:25:56.318" endtime="20230613 10:25:59.515"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:56.317" endtime="20230613 10:25:59.515"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:26.454" endtime="20230613 10:25:59.516"/>
+</test>
+<test id="s1-t12" name="Delete Post Test" line="131">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:25:59.521" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:25:59.520" endtime="20230613 10:26:02.677"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:02.679" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:26:02.677" endtime="20230613 10:26:05.780"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:05.781" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:26:05.780" endtime="20230613 10:26:10.881"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:26:10.881" endtime="20230613 10:26:10.881"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:59.519" endtime="20230613 10:26:10.882"/>
+</kw>
+<kw name="Click to Post Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Posts</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:10.883" level="INFO">Clicking link 'link=Posts'.</msg>
+<status status="PASS" starttime="20230613 10:26:10.883" endtime="20230613 10:26:13.980"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:26:13.980" endtime="20230613 10:26:13.981"/>
+</kw>
+<status status="PASS" starttime="20230613 10:26:10.882" endtime="20230613 10:26:13.981"/>
+</kw>
+<kw name="Delete Action" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=ItemList__control--delete</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:13.982" level="INFO">Clicking button 'class=ItemList__control--delete'.</msg>
+<status status="PASS" starttime="20230613 10:26:13.981" endtime="20230613 10:26:19.087"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:26:19.087" endtime="20230613 10:26:19.087"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-t4884</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:19.088" level="INFO">Clicking button 'class=css-t4884'.</msg>
+<status status="PASS" starttime="20230613 10:26:19.087" endtime="20230613 10:26:24.187"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:26:24.187" endtime="20230613 10:26:24.187"/>
+</kw>
+<status status="PASS" starttime="20230613 10:26:13.981" endtime="20230613 10:26:24.187"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=css-pbviij</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:26.213" level="INFO">${Result} = No posts found...</msg>
+<status status="PASS" starttime="20230613 10:26:24.188" endtime="20230613 10:26:26.213"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${PostIsEmpty}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:26:26.214" endtime="20230613 10:26:26.214"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:26.215" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:26:26.215" endtime="20230613 10:26:29.417"/>
+</kw>
+<status status="PASS" starttime="20230613 10:26:26.215" endtime="20230613 10:26:29.417"/>
+</kw>
+<status status="PASS" starttime="20230613 10:25:59.518" endtime="20230613 10:26:29.418"/>
+</test>
+<test id="s1-t13" name="Create User Test" line="139">
+<kw name="Signin Keystonejs" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${DEMO EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:29.422" level="INFO">Typing text 'demo@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:26:29.421" endtime="20230613 10:26:32.597"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${DEMO PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:32.597" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:26:32.597" endtime="20230613 10:26:35.704"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:35.706" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:26:35.704" endtime="20230613 10:26:40.793"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:26:40.793" endtime="20230613 10:26:40.794"/>
+</kw>
+<status status="PASS" starttime="20230613 10:26:29.421" endtime="20230613 10:26:40.794"/>
+</kw>
+<kw name="Click to User Page" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Users</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:40.795" level="INFO">Clicking link 'link=Users'.</msg>
+<status status="PASS" starttime="20230613 10:26:40.795" endtime="20230613 10:26:43.898"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230613 10:26:43.898" endtime="20230613 10:26:43.898"/>
+</kw>
+<status status="PASS" starttime="20230613 10:26:40.794" endtime="20230613 10:26:43.898"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-we21er</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:43.899" level="INFO">Clicking button 'class=css-we21er'.</msg>
+<status status="PASS" starttime="20230613 10:26:43.899" endtime="20230613 10:26:49.055"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=name.first</arg>
+<arg>Lucy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:49.056" level="INFO">Typing text 'Lucy' into text field 'name=name.first'.</msg>
+<status status="PASS" starttime="20230613 10:26:49.055" endtime="20230613 10:26:52.146"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=name.last</arg>
+<arg>Huang</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:52.147" level="INFO">Typing text 'Huang' into text field 'name=name.last'.</msg>
+<status status="PASS" starttime="20230613 10:26:52.147" endtime="20230613 10:26:55.260"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>lucy@keystonejs.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:55.262" level="INFO">Typing text 'lucy@keystonejs.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230613 10:26:55.261" endtime="20230613 10:26:58.467"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>hey_lucy1026</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:26:58.469" level="INFO">Typing text 'hey_lucy1026' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20230613 10:26:58.468" endtime="20230613 10:27:01.605"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password_confirm</arg>
+<arg>hey_lucy1026</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230613 10:27:01.606" level="INFO">Typing text 'hey_lucy1026' into text field 'name=password_confirm'.</msg>
+<status status="PASS" starttime="20230613 10:27:01.605" endtime="20230613 10:27:04.751"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-h629qq</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:27:04.752" level="INFO">Clicking button 'class=css-h629qq'.</msg>
+<status status="PASS" starttime="20230613 10:27:04.752" endtime="20230613 10:27:09.884"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:27:11.100" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:27:09.885" endtime="20230613 10:27:11.100"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=css-2960tt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230613 10:27:11.101" level="INFO">Clicking button 'class=css-2960tt'.</msg>
+<status status="PASS" starttime="20230613 10:27:11.101" endtime="20230613 10:27:16.237"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:27:17.443" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:27:16.238" endtime="20230613 10:27:17.443"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>class=css-dmf4a8</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:27:17.444" level="INFO">Clicking link 'class=css-dmf4a8'.</msg>
+<status status="PASS" starttime="20230613 10:27:17.443" endtime="20230613 10:27:20.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1.2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230613 10:27:21.774" level="INFO">Slept 1 second 200 milliseconds</msg>
+<status status="PASS" starttime="20230613 10:27:20.568" endtime="20230613 10:27:21.774"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Result}</var>
+<arg>class=ItemList-wrapper</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230613 10:27:23.851" level="INFO">${Result} = Name
+Email
+Phone
+Photo
+Demo User demo@keystonejs.com
+Jennifer Chen jenjen@keystonejs.com
+Lucy Huang lucy@keystonejs.com
+Test User test@keystonejs.com
+delete 1 delete1@keystonejs.com
+delete 10 delete10...</msg>
+<status status="PASS" starttime="20230613 10:27:21.774" endtime="20230613 10:27:23.851"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${User}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230613 10:27:23.852" endtime="20230613 10:27:23.852"/>
+</kw>
+<kw name="Signout Keystonejs" library="resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/keystone/signout"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230613 10:27:23.854" level="INFO">Clicking link 'xpath=//a[@href="/keystone/signout"]'.</msg>
+<status status="PASS" starttime="20230613 10:27:23.854" endtime="20230613 10:27:27.122"/>
+</kw>
+<status status="PASS" starttime="20230613 10:27:23.853" endtime="20230613 10:27:27.122"/>
+</kw>
+<status status="PASS" starttime="20230613 10:26:29.420" endtime="20230613 10:27:27.123"/>
+</test>
+<kw name="Run Keywords" library="BuiltIn" type="TEARDOWN">
+<arg>Close Keystonejs</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Close Keystonejs" library="resource">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230613 10:27:27.127" endtime="20230613 10:27:30.284"/>
+</kw>
+<status status="PASS" starttime="20230613 10:27:27.126" endtime="20230613 10:27:30.285"/>
+</kw>
+<status status="PASS" starttime="20230613 10:27:27.126" endtime="20230613 10:27:30.285"/>
+</kw>
+<status status="PASS" starttime="20230613 10:19:24.186" endtime="20230613 10:27:30.285"/>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="13" fail="0" skip="0" id="s1" name="keystoneJS tests">keystoneJS tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
