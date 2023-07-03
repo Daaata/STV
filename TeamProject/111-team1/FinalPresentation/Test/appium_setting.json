@@ -1,0 +1,8 @@
+{
+  "platformName": "Android",
+  "deviceName": "emulator-5554",
+  "platformVersion": "13",
+  "automationName": "UiAutomator2",
+  "autoGrantPermissions": true,
+  "app": "C:/software_testing/apk/APKPure.apk"
+}

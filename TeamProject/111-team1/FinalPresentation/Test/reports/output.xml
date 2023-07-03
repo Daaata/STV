@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.7.6rc1 on win32)" generated="20230620 10:23:36.973" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\software_testing\tests">
+<suite id="s1-s1" name="Testnote" source="C:\software_testing\tests\testnote.robot">
+<test id="s1-s1-t1" name="test_CreateNote" line="26">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_URL}</arg>
+<arg>automationName=${automationName}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>app=${app}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
+<arg>noReset=${noReset}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230620 10:23:37.165" endtime="20230620 10:24:02.474"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Note}</var>
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:02.483" level="INFO">${Note} = xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.Web...</msg>
+<status status="PASS" starttime="20230620 10:24:02.482" endtime="20230620 10:24:02.483"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Note}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:24:11.212" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:02.486" endtime="20230620 10:24:11.212"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:24:11.431" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:11.212" endtime="20230620 10:24:11.431"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:02.485" endtime="20230620 10:24:11.431"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Note}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:24:11.435" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:24:15.403" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:11.433" endtime="20230620 10:24:15.404"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Text}</var>
+<arg>123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:15.405" level="INFO">${Text} = 123</msg>
+<status status="PASS" starttime="20230620 10:24:15.405" endtime="20230620 10:24:15.405"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Text Field}</var>
+<arg>class=android.widget.EditText</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:15.406" level="INFO">${Text Field} = class=android.widget.EditText</msg>
+<status status="PASS" starttime="20230620 10:24:15.405" endtime="20230620 10:24:15.406"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Text Field}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20230620 10:24:15.409" endtime="20230620 10:24:15.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230620 10:24:15.447" endtime="20230620 10:24:15.505"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:15.407" endtime="20230620 10:24:15.505"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Text Field}</arg>
+<arg>${Text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230620 10:24:15.510" level="INFO">Typing text '123' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" starttime="20230620 10:24:15.506" endtime="20230620 10:24:16.844"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Enter}</var>
+<arg>xpath=//android.view.View[@content-desc=\"checkmark_alt\"]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:16.848" level="INFO">${Enter} = xpath=//android.view.View[@content-desc="checkmark_alt"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:16.845" endtime="20230620 10:24:16.848"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Enter}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:24:16.896" level="INFO">xpath criteria: //android.view.View[@content-desc="checkmark_alt"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:16.849" endtime="20230620 10:24:16.896"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:24:18.244" level="INFO">xpath criteria: //android.view.View[@content-desc="checkmark_alt"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:16.896" endtime="20230620 10:24:18.244"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:16.849" endtime="20230620 10:24:18.244"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Enter}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:24:18.247" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="checkmark_alt"]/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:24:19.976" level="INFO">xpath criteria: //android.view.View[@content-desc="checkmark_alt"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:18.246" endtime="20230620 10:24:19.976"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${New Note}</var>
+<arg>123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:19.978" level="INFO">${New Note} = 123</msg>
+<status status="PASS" starttime="20230620 10:24:19.977" endtime="20230620 10:24:19.978"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Note Field}</var>
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:19.978" level="INFO">${Note Field} = xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.Web...</msg>
+<status status="PASS" starttime="20230620 10:24:19.978" endtime="20230620 10:24:19.978"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Note Field}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:24:20.083" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:19.979" endtime="20230620 10:24:20.083"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:24:20.141" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:20.083" endtime="20230620 10:24:20.141"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:19.978" endtime="20230620 10:24:20.141"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Note Field}</arg>
+<arg>${New Note}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20230620 10:24:20.143" level="INFO">Verifying element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView' contains exactly text '123'.</msg>
+<msg timestamp="20230620 10:24:20.192" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:20.141" endtime="20230620 10:24:20.192"/>
+</kw>
+<kw name="Close All Applications" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20230620 10:24:20.193" endtime="20230620 10:24:21.090"/>
+</kw>
+<status status="PASS" starttime="20230620 10:23:37.164" endtime="20230620 10:24:21.090"/>
+</test>
+<test id="s1-s1-t2" name="test_DontSaveCreateNote" line="45">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_URL}</arg>
+<arg>automationName=${automationName}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>app=${app}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
+<arg>noReset=${noReset}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230620 10:24:21.095" endtime="20230620 10:24:44.225"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Note}</var>
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:44.231" level="INFO">${Note} = xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.Web...</msg>
+<status status="PASS" starttime="20230620 10:24:44.230" endtime="20230620 10:24:44.232"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Note}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:24:53.579" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:44.232" endtime="20230620 10:24:53.581"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:24:53.643" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:53.581" endtime="20230620 10:24:53.643"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:44.232" endtime="20230620 10:24:53.643"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Note}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:24:53.645" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:24:53.825" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:53.644" endtime="20230620 10:24:53.826"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Text}</var>
+<arg>123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:53.826" level="INFO">${Text} = 123</msg>
+<status status="PASS" starttime="20230620 10:24:53.826" endtime="20230620 10:24:53.826"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Text Field}</var>
+<arg>class=android.widget.EditText</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:53.827" level="INFO">${Text Field} = class=android.widget.EditText</msg>
+<status status="PASS" starttime="20230620 10:24:53.827" endtime="20230620 10:24:53.827"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Text Field}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20230620 10:24:53.827" endtime="20230620 10:24:57.299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230620 10:24:57.299" endtime="20230620 10:24:57.342"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:53.827" endtime="20230620 10:24:57.342"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Text Field}</arg>
+<arg>${Text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230620 10:24:57.345" level="INFO">Typing text '123' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" starttime="20230620 10:24:57.343" endtime="20230620 10:24:57.435"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${X}</var>
+<arg>xpath=//android.view.View[@content-desc=\"xmark\"]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:24:57.438" level="INFO">${X} = xpath=//android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:57.436" endtime="20230620 10:24:57.438"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${X}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:24:58.868" level="INFO">xpath criteria: //android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:57.441" endtime="20230620 10:24:58.868"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:24:58.928" level="INFO">xpath criteria: //android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:58.868" endtime="20230620 10:24:58.928"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:57.438" endtime="20230620 10:24:58.928"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${X}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:24:58.930" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="xmark"]/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:25:00.294" level="INFO">xpath criteria: //android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:24:58.928" endtime="20230620 10:25:00.294"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Do Not Save}</var>
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:00.295" level="INFO">${Do Not Save} = xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.Web...</msg>
+<status status="PASS" starttime="20230620 10:25:00.295" endtime="20230620 10:25:00.295"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Do Not Save}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:25:01.629" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:00.296" endtime="20230620 10:25:01.629"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:25:01.700" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:01.629" endtime="20230620 10:25:01.701"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:00.296" endtime="20230620 10:25:01.701"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Do Not Save}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:25:01.704" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:25:01.844" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:01.701" endtime="20230620 10:25:01.844"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${New Note}</var>
+<arg>123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:01.845" level="INFO">${New Note} = 123</msg>
+<status status="PASS" starttime="20230620 10:25:01.845" endtime="20230620 10:25:01.845"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Note Field}</var>
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:01.845" level="INFO">${Note Field} = xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.Web...</msg>
+<status status="PASS" starttime="20230620 10:25:01.845" endtime="20230620 10:25:01.845"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Note Field}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:25:03.211" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:01.846" endtime="20230620 10:25:03.211"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:25:03.283" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:03.211" endtime="20230620 10:25:03.284"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:01.846" endtime="20230620 10:25:03.284"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Note Field}</arg>
+<arg>${New Note}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20230620 10:25:03.290" level="INFO">Verifying element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView' contains exactly text '123'.</msg>
+<msg timestamp="20230620 10:25:03.352" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:03.289" endtime="20230620 10:25:03.352"/>
+</kw>
+<kw name="Close All Applications" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20230620 10:25:03.354" endtime="20230620 10:25:03.975"/>
+</kw>
+<status status="PASS" starttime="20230620 10:24:21.093" endtime="20230620 10:25:03.976"/>
+</test>
+<test id="s1-s1-t3" name="test_CancleCreateNote" line="67">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${APPIUM_URL}</arg>
+<arg>automationName=${automationName}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>app=${app}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
+<arg>noReset=${noReset}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230620 10:25:03.980" endtime="20230620 10:25:28.209"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Note}</var>
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:28.218" level="INFO">${Note} = xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.Web...</msg>
+<status status="PASS" starttime="20230620 10:25:28.218" endtime="20230620 10:25:28.219"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Note}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:25:35.780" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView
+xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:28.220" endtime="20230620 10:25:35.781"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:25:35.847" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:35.782" endtime="20230620 10:25:35.847"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:28.219" endtime="20230620 10:25:35.847"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Note}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:25:35.850" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:25:35.978" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:35.847" endtime="20230620 10:25:35.978"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Text}</var>
+<arg>123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:35.978" level="INFO">${Text} = 123</msg>
+<status status="PASS" starttime="20230620 10:25:35.978" endtime="20230620 10:25:35.978"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Text Field}</var>
+<arg>class=android.widget.EditText</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:35.979" level="INFO">${Text Field} = class=android.widget.EditText</msg>
+<status status="PASS" starttime="20230620 10:25:35.979" endtime="20230620 10:25:35.979"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Text Field}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20230620 10:25:35.980" endtime="20230620 10:25:39.549"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230620 10:25:39.551" endtime="20230620 10:25:39.604"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:35.979" endtime="20230620 10:25:39.604"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${Text Field}</arg>
+<arg>${Text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230620 10:25:39.608" level="INFO">Typing text '123' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" starttime="20230620 10:25:39.605" endtime="20230620 10:25:39.681"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${X}</var>
+<arg>xpath=//android.view.View[@content-desc=\"xmark\"]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:39.683" level="INFO">${X} = xpath=//android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:39.681" endtime="20230620 10:25:39.683"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${X}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:25:39.798" level="INFO">xpath criteria: //android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:39.685" endtime="20230620 10:25:39.798"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:25:40.967" level="INFO">xpath criteria: //android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:39.798" endtime="20230620 10:25:40.967"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:39.685" endtime="20230620 10:25:40.967"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${X}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:25:40.969" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="xmark"]/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:25:41.092" level="INFO">xpath criteria: //android.view.View[@content-desc="xmark"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:40.968" endtime="20230620 10:25:41.092"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cancel}</var>
+<arg>xpath=//android.view.View[@content-desc=\"clock\"]/android.widget.TextView</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:41.093" level="INFO">${Cancel} = xpath=//android.view.View[@content-desc="clock"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:41.092" endtime="20230620 10:25:41.093"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Cancel}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:25:41.129" level="INFO">xpath criteria: //android.view.View[@content-desc="clock"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:41.093" endtime="20230620 10:25:41.129"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:25:42.451" level="INFO">xpath criteria: //android.view.View[@content-desc="clock"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:41.129" endtime="20230620 10:25:42.451"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:41.093" endtime="20230620 10:25:42.451"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Cancel}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230620 10:25:42.453" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="clock"]/android.widget.TextView'.</msg>
+<msg timestamp="20230620 10:25:43.826" level="INFO">xpath criteria: //android.view.View[@content-desc="clock"]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230620 10:25:42.451" endtime="20230620 10:25:43.827"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${New Note}</var>
+<arg>123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:43.827" level="INFO">${New Note} = 123</msg>
+<status status="PASS" starttime="20230620 10:25:43.827" endtime="20230620 10:25:43.827"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Note Field}</var>
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.widget.EditText</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230620 10:25:43.830" level="INFO">${Note Field} = xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.Web...</msg>
+<status status="PASS" starttime="20230620 10:25:43.828" endtime="20230620 10:25:43.830"/>
+</kw>
+<kw name="Wait For Element">
+<arg>${Note Field}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230620 10:25:43.901" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.widget.EditText</msg>
+<status status="PASS" starttime="20230620 10:25:43.831" endtime="20230620 10:25:43.902"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${element}</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20230620 10:25:45.183" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.widget.EditText</msg>
+<status status="PASS" starttime="20230620 10:25:43.902" endtime="20230620 10:25:45.183"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:43.830" endtime="20230620 10:25:45.183"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${Note Field}</arg>
+<arg>${New Note}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20230620 10:25:45.186" level="INFO">Verifying element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.widget.EditText' contains exactly text '123'.</msg>
+<msg timestamp="20230620 10:25:45.258" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.widget.EditText</msg>
+<status status="PASS" starttime="20230620 10:25:45.184" endtime="20230620 10:25:45.259"/>
+</kw>
+<kw name="Close All Applications" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20230620 10:25:45.259" endtime="20230620 10:25:47.144"/>
+</kw>
+<status status="PASS" starttime="20230620 10:25:03.979" endtime="20230620 10:25:47.146"/>
+</test>
+<doc>A test suite with app tests</doc>
+<status status="PASS" starttime="20230620 10:23:36.989" endtime="20230620 10:25:47.164"/>
+</suite>
+<status status="PASS" starttime="20230620 10:23:36.975" endtime="20230620 10:25:47.171"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Testnote">Tests.Testnote</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
