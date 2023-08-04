@@ -1,0 +1,282 @@
+
+<!-- saved from url=(0080)https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab5/Lab5.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
+    
+    <meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+    <link rel="stylesheet" href="./Lab5_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="./Lab5_files/bootstrap.min.js.下載" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Software Testing Lab6</title>
+	<style type="text/css">
+.auto-style1 {
+	color: #000000;
+}
+</style>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+
+<body>
+
+<div class="container">
+	<p class="MsoNormal" align="center"><b><font face="Book Antiqua">Lab 5 
+	Acceptance Testing (using Keyword-Driven Testing)</font></b></p>
+	<p><b><font face="Book Antiqua">Lab</font></b><font face="Book Antiqua"><b> 
+	Objective:</b><br>
+	This Lab aims to help students to learn the concepts of acceptance testing, 
+	design test cases based on user scenarios, and be familiar with an automated 
+	keyword-driven testing tool. <br>
+	</font></p>
+	<p><b><font face="Book Antiqua">1. SUT</font></b><font face="Book Antiqua"><b> 
+	Description:</b></font><font face="Book Antiqua" color="#0000FF"><b> <br>
+	</b></font><font face="Book Antiqua">The system to be tested for this lab is
+	<a target="_blank" href="https://keystonejs.com/">KeystoneJS</a>, an open 
+	source framework for developing database-driven websites, applications and 
+	APIs in Node.js. KeystoneJS makes it easy to create sophisticated web sites 
+	and apps, and comes with a beautiful auto-generated Admin UI. To learn more 
+	about this platform and its features, please refer to&nbsp;<a href="https://github.com/keystonejs/keystone">KeystoneJS</a> 
+	at GitHub. &nbsp;<b> </b></font></p>
+	<p><b><font face="Book Antiqua">2. The Testing Tool<br>
+	</font></b><font face="Book Antiqua">The testing tool will be used in this 
+	lab is <a href="https://robotframework.org/">Robot Framework</a> with
+	<a href="https://github.com/robotframework/SeleniumLibrary/">Selenium 
+	library</a>. The instructions for installing Robot Framework using pip (with 
+	python) can be found
+	<a href="https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#installing-pip-for-python">
+	here</a> (</font><font face="Consolas" size="2">pip install robotframework</font><font face="Book Antiqua">) 
+	and for installing Selenium library can be found
+	<a href="https://github.com/robotframework/SeleniumLibrary/">here</a> (</font><font face="Consolas" size="2">pip 
+	install --upgrade robotframework-seleniumlibrary</font><font face="Book Antiqua">). 
+	You can use <a href="https://github.com/robotframework/RIDE/wiki">RIDE</a> 
+	(standard editor),&nbsp; <a href="https://github.com/nokia/RED">RED</a> 
+	(eclipse plug), or
+	<a href="https://marketplace.visualstudio.com/items?itemName=TomiTurtiainen.rf-intellisense">
+	vs code plugin</a> (Robot Framework Intellisense) to develop your tests. To 
+	use&nbsp; <a href="https://github.com/robotframework/SeleniumLibrary/">
+	Selenium library</a> for Robot Framework, you need to install
+	<a href="https://github.com/robotframework/SeleniumLibrary/#browser-drivers">
+	browser drivers</a> separately and place it into a directory that is in the 
+	PATH of your operating system or a directory of your test scripts. For those 
+	using chrome browser, you can find and download the right
+	<a href="https://chromedriver.chromium.org/downloads/version-selection">
+	version of Chrome Driver</a> for your browser. A
+	<a href="https://github.com/robotframework/WebDemo">WebDemo</a> example of 
+	using Robot Framework can be found
+	<a href="https://github.com/robotframework/WebDemo">here</a>. You can learn 
+	more about how to use Robot Framework through
+	<a href="https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html">
+	the user guide of Robot Framework</a>.<br>
+	<br>
+	You will need to run KeystoneJS application on
+	<a href="https://www.docker.com/">Docker</a>. Please install
+	<a href="https://docs.docker.com/docker-for-windows/install/">Docker Desktop 
+	for Windows</a> or <a href="https://docs.docker.com/docker-for-mac/install/">
+	Docker Desktop for Mac</a> on your machine. <br>
+	After completing the Docker Desktop installation, please run the Docker 
+	Desktop application and follow the instructions at
+	<a href="https://hub.docker.com/r/ntutselab/keystonejs">Docker Hub</a> to 
+	run the KeystoneJS. <br>
+	If everything goes well, you may see the application is running at
+	<a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> </font></p>
+	<p align="center">
+	<img border="0" style="width: 80%" src="./Lab5_files/keystonejs.png"> </p>
+	<p><font face="Book Antiqua"><b>3. Test Project and Test Suite Generation<br>
+	</b>In this lab, you will need to develop test requirements for the features 
+	of <a target="_blank" href="https://keystonejs.com/">KeystoneJS</a>. You are 
+	also required to design test cases to verify the test requirements. These 
+	test cases should be organized in terms of the structure of the feature/use 
+	case/user story/user scenario to be tested. Each test requirement should 
+	have at least one test case to verify (i.e., cover) the requirement. For the 
+	design of test cases, you need exercise the
+	<span style="background-color: #FFFF00"><b>possible scenarios (or paths)</b></span><span style="background-color: #FFFFFF"> 
+	for the features/</span>use cases/user stories/user scenario<span style="background-color: #FFFFFF">s 
+	to be tested</span>, including <b>happy</b> and <b>alternative paths</b>, as 
+	well as <span style="background-color: #FFFF00">possible <b>valid and 
+	invalid test data<span style="font-weight: 400"> as many as you can</span></b></span>.
+	<font color="#0000FF"><b><span style="background-color: #FFFFFF">Make sure 
+	that proper </span><span style="background-color: #FFFF00">coverage criteria</span><span style="background-color: #FFFFFF"> 
+	are used when designing the test cases.</span></b></font> Since KeystoneJS 
+	supports a lot of features, you will be required to test only the following 
+	features in order to limit the necessary test effort.
+	<span style="background-color: #FFFF00">Design <font color="#FF0000">one or 
+	more test cases</font> for each of the following features and you need to 
+	design at least <font color="#FF0000">10 features/uses cases/user 
+	stories/user scenarios</font> for the Lab.</span></font></p>
+	<ul>
+		<li>
+		<h3 style="font-family: Book Antiqua; line-height: 1em; outline: 0px; font-style: normal; vertical-align: baseline; color: rgb(34, 34, 34); font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; border: 0px none; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 12px; padding: 0px">
+		<font size="3">Post Features</font></h3>
+		<ul>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Create a post on the Admin 
+			UI page</font></p></li>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Edit a post on the Admin 
+			UI page</font></p></li>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Delete a post on the Admin 
+			UI page</font></p></li>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Search posts by keyword on 
+			the Admin UI page</font></p></li>
+		</ul>
+		</li>
+		<li>
+		<h3 style="font-family: Book Antiqua; line-height: 1em; outline: 0px; font-style: normal; vertical-align: baseline; color: rgb(34, 34, 34); font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; border: 0px none; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 12px; padding: 0px">
+		<font size="3">Comment Features</font></h3>
+		<ul>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Create a comment on Admin 
+			UI page</font></p></li>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Edit a comment on Admin UI 
+			page</font></p></li>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Delete a comment on Admin 
+			UI page</font></p></li>
+		</ul>
+		</li>
+		<li>
+		<h3 style="font-family: Book Antiqua; line-height: 1em; outline: 0px; font-style: normal; vertical-align: baseline; color: rgb(34, 34, 34); font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; border: 0px none; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 12px; padding: 0px">
+		<font size="3">Category Features</font></h3>
+		<ul>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Create a category on Admin 
+			UI page</font></p></li>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Show posts of the specific 
+			category by pressing category name on the "Blog" page</font></p></li>
+		</ul>
+		</li>
+		<li>
+		<h3 style="font-family: Book Antiqua; line-height: 1em; outline: 0px; font-style: normal; vertical-align: baseline; color: rgb(34, 34, 34); font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; border: 0px none; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 12px; padding: 0px">
+		<font size="3">Enquirie Feature</font></h3>
+		<ul>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Create an enquiry on the 
+			"Contact" page</font></p></li>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Delete an enquiry on Admin 
+			UI page</font></p></li>
+		</ul>
+		</li>
+		<li>
+		<h3 style="font-family: Book Antiqua; line-height: 1em; outline: 0px; font-style: normal; vertical-align: baseline; color: rgb(34, 34, 34); font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; border: 0px none; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 12px; padding: 0px">
+		<font size="3">User Feature</font></h3>
+		<ul>
+			<li>
+			<p align="LEFT"><font face="Book Antiqua">Create a new user on Admin 
+			UI page (Name, Email, Phone, and Password must be set when creating 
+			the new user)</font></p></li>
+		</ul>
+		<font face="Book Antiqua">
+		<h5></h5>
+		<p><span style="background-color: #FFFF00"><br>
+		Please note that you must do the <font color="#FF0000">verifications</font> 
+		or <font color="#FF0000">assertions</font> for each test scenario to 
+		verify if the execution results are correct.</span> <br>
+　</p>
+		<h5></h5>
+		</font></li>
+	</ul>
+	<p align="LEFT"><font face="Book Antiqua"><b>4. Test Plan </b>(2~3 pages 
+	would be sufficient for the test plan)</font><br>
+	<font face="Book Antiqua">To begin with, a plan must be created. Document 
+	this test plan, as it will be included with your lab report. This plan 
+	should include the following information:</font></p>
+	<ul>
+		<li>
+		<p align="left"><font face="Book Antiqua"><b>Summary/Scope</b> (briefly 
+		describe the application under test and the test requirements or test 
+		goal) </font></p></li>
+		<li>
+		<p align="left"><font face="Book Antiqua"><b>Features to be tested</b> 
+		(lists each component or feature to be tested)</font></p></li>
+		<li>
+		<p align="left"><font face="Book Antiqua"><b>Success criteria of 
+		completing the test</b> (i.e., test pass/fail criteria used for deciding 
+		whether the features are PASS or FAIL)</font></p></li>
+		<li>
+		<p align="left"><font face="Book Antiqua"><b>Test environment and/or 
+		infrastructure</b> (including hardware, software, test data, etc.)</font></p></li>
+		<li>
+		<p align="left"><font face="Book Antiqua"><b>Test approaches</b> (e.g., 
+		describing what <font color="#0000FF">approaches and coverage criteria</font> 
+		will be used to design test cases for each feature to be tested (e.g., 
+		user scenarios, ISP, etc.), how to evaluate the adequacy of the test 
+		(e.g., coverage), and what tools will be used to perform the test; you 
+		may use multiple testing technique to design the test cases to ensure 
+		that all the test requirements can be satisfied and the quality of tests 
+		can be achieved.)</font></p></li>
+		<li>
+		<p align="left"><font face="Book Antiqua"><b>Testing tasks</b> (or 
+		activities required for implementing the approach)</font></p></li>
+	</ul>
+	<p align="LEFT"><font face="Book Antiqua"><b>5. Lab Report<br>
+	</b>The Lab report must include (but not limit to) the following sections:</font></p>
+	<ul>
+		<li>
+		<p align="LEFT"><font face="Book Antiqua">Test Plan: briefly describe 
+		test requirements, planed test activities, <b>approach</b>, and success 
+		criteria for the test.</font></p></li>
+		<li>
+		<p align="LEFT"><font face="Book Antiqua">Test Design: use approaches 
+		combining ISP, graph (<strong>use cases</strong>), and logic methods<font color="#0000FF">.
+		</font></font><span class="auto-style1"></span>
+		<font color="#0000FF" face="Book Antiqua">Please use the
+		<a href="https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab5/Lab5_template.xlsx">template</a> to specify the design of your 
+		test cases, including the test case ID, test case name, scenario, test 
+		steps, input data, coverage criteria, and expected results.</font></p></li>
+		<li>
+		<p align="LEFT"><font face="Book Antiqua" color="#FF0000">Keyword 
+		Design: </font><font face="Book Antiqua">you are encouraged to design 
+		your own keywords (user-defined keywords) and reuse the keywords as much 
+		as you can in order to increase the modularity of test cases and reduce 
+		the test effort. Here is <a href="https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab5/lab5.zip">a set of resource keywords</a> 
+		for <a target="_blank" href="https://keystonejs.com/">KeystoneJS</a>, 
+		including a shell script for running Robot Framework, that can be used 
+		to 
+		reduce your effort of developing test script.</font></p></li>
+		<li>
+		<p align="LEFT"><font face="Book Antiqua">Test Implementation:
+		<span style="font-weight: 700; background-color: #FFFF00">Robot 
+		Framework test scripts</span> of your test cases. </font></p></li>
+		<li>
+		<p align="LEFT"><font face="Book Antiqua">Test Result: execution results 
+		(i.e., test report) of Robot Framework test scripts.</font></p></li>
+		<li>
+		<p align="LEFT"><font face="Book Antiqua">Test Coverage (<font color="#FF0000">optional</font>): 
+		you may use
+		<a href="https://shvets.github.io/blog/2013/10/19/configure_simplecov.html">
+		SimpleCov</a>&nbsp;for Ruby on Rails, <a href="http://blanketjs.org/">Blanket</a> 
+		for client-side Javascript, or&nbsp;
+		<a href="https://gotwarlost.github.io/istanbul/">istanbul</a> for 
+		server-side Javascript to measure code coverage.</font></p></li>
+	</ul>
+	<p><font face="Book Antiqua">Please convert your Lab report to <code>.pdf</code> 
+	file, <code>.docx</code> file will not be accepted. <br>
+	The <span style="background-color: #FFFF00">Lab report and your Robot 
+	Framework test script</span> must put in the corresponding directory in your 
+	Lab repository (e.g. <code>TestProject -&gt; LabReport -&gt; Lab</code></font><code>5</code><font face="Book Antiqua">). <br>
+	Make sure you have pushed your code and Lab report on the
+	<a target="_blank" href="https://course.selab.ml/stv-gitlab/">GitLab</a> 
+	successfully. <br>
+	</font></p>
+	<p><font face="Book Antiqua">Finally, </font>
+	<font face="Book Antiqua" style="background-color: #FFFF00">you must open an 
+	new <b>issue</b> on
+	<a target="_blank" href="https://course.selab.ml/stv-gitlab/TA/GeoProject">TA's 
+	TestProject</a> to notify TA that 
+	you have done your lab. </font><br>
+	<br>
+	<font face="Book Antiqua">TA will run all of your test cases on a clean 
+	KeystoneJS environment, which is a whole new Docker container. You have to 
+	make sure that <span style="background-color: #FFFF00">all of your test 
+	cases can run correctly without any error and pass every assertion from the 
+	first one to the last one </span>. If you develop your tests with multiple 
+	test files, you 
+	may consider to organize your tests into test suites. </font></p></div>
+
+
+
+
+</body></html>

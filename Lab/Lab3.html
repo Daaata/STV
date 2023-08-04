@@ -1,0 +1,181 @@
+
+<!-- saved from url=(0080)https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab3/Lab3.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
+
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<link rel="stylesheet" href="./Lab3_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="./Lab3_files/bootstrap.min.js.下載" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>Software Testing Lab3</title>
+<style type="text/css">
+.auto-style1 {
+	font-size: small;
+}
+.auto-style2 {
+	background-color: #FFFFFF;
+}
+</style>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+
+<body>
+<div class="container">
+<p class="MsoNormal" align="center"><b><font face="Book Antiqua">Lab 3 Test 
+Design Techniques (Graph Coverage)</font></b></p>
+<p><b><font face="Book Antiqua">Lab</font></b><font face="Book Antiqua"><b> Objective:</b><br>
+This lab aims to help students learning the concepts and practicing the skills of 
+test case design using <b>basis path</b> and <b>graph 
+coverage</b>. <br>
+</font></p>
+<p><b><font face="Book Antiqua">1. SUT</font></b><font face="Book Antiqua"><b> Description:</b></font><font face="Book Antiqua" color="#0000FF"><b> 
+	<br>
+	</b></font><font face="Book Antiqua">Similar to Lab1, the project to be tested for this lab is
+			Geo, an open source Java framework for geohashing.
+			<br>
+			Please keep developing new test code in your Lab 1 repository which should already been created on 
+<a target="_blank" href="https://course.selab.ml/stv-gitlab/">GitLab</a>, <span style="background-color: #FFFF00">DO NOT create or fork another new repository</span> in this lab.</font>
+		</p>
+    <p><b><font face="Book Antiqua">2. Test Environment<br>
+</font></b>
+	<font face="Book Antiqua">
+	The test environment will be<span>&nbsp;</span></font><a href="https://www.jetbrains.com/idea/" style="box-sizing: border-box; background-color: rgb(255, 255, 255); color: rgb(51, 122, 183); text-decoration: none; font-family: &quot;Book Antiqua&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">IntelliJ 
+	IDEA</a><span style="color: rgb(51, 51, 51); font-family: &quot;Book Antiqua&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">. 
+	You should import the project which forked and add all the libraries 
+	imported by gradle. Also, you need to use JUnit4 as your unit testing 
+	framework.</span><font face="Book Antiqua">&nbsp;
+    </font></p>
+<p><font face="Book Antiqua"><b>3. Test Suite Generation<br>
+</b>You are required to 
+<span style="color: rgb(51, 51, 51); font-family: &quot;Book Antiqua&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+to design and implement unit tests</span> for the following classes 
+<font color="#FF0000">using basis path </font>and<font color="#FF0000"> 
+graph coverage for source code</font> to <span style="background-color: #FFFF00">increase</span> the 
+statement and branch coverage of the tests in Lab1/Lab2. </font></p>
+    <ul>
+        <li>
+            <font face="Book Antiqua">Base32 (in the com.github.davidmoten.geo): Has 5 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">Coverage (in the com.github.davidmoten.geo): Has 5 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">CoverageLongs (in the com.github.davidmoten.geo): Has 5 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">GeoHash (in the com.github.davidmoten.geo): Has 23 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">Geomem (In com.github.davidmoten.geo.mem): Has 6 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">Info (In com.github.davidmoten.geo.mem): Has 6 methods
+			</font>
+        </li>
+    </ul>
+    <p><font face="Book Antiqua">Take a minute to browse the API
+        specifications of each of these classes in
+        <a href="http://davidmoten.github.io/geo/apidocs/index.html" target="_blank">
+            Javadoc</a>.
+    </font>
+    </p>
+<p><font face="Book Antiqua"><b>4. Test Plan</b></font><br>
+<font face="Book Antiqua">To begin with, a plan must be created. Document this 
+test plan, as it will be included with your lab report. This plan should include 
+a brief description about the requirements of the test (such as the goal of 
+statement or branch coverage), the <u>strategy</u> and <u>activities</u> you plan to perform to meet the 
+requirements, <b>the <u>approach</u> to achieve the goal by designing the test 
+cases with Graph Coverage technique (such as node, edge, basis path, prime-path, 
+all-def, all-use, complete path)</b>, and the success criteria of completing the test (such as 
+satisfying the statement or branch coverage goal). (one page would be sufficient for the test plan)</font></p>
+    <p><font face="Book Antiqua">Carry out your test plan. To keep your
+        workload manageable, we would like you to create test cases for <span style="background-color: #FFFF00"><b>6</b></span> out 
+	of 50 methods (38 methods of com.github.davidmoten.geo
+        and 12 methods of com.github.davidmoten.geo.mem). Choose 
+	<span style="background-color: #FFFF00"><b>6</b></span> methods to 
+	test and create test cases for them. Some of the chosen methods (3/6 
+	methods) can be the 
+	same as those selected in Lab1 or Lab 2. Try
+        to keep each test case
+        in a separate JUnit test method if possible. </font>
+    </p>
+<p>
+<span class="auto-style1" style="color: rgb(51, 51, 51); font-family: &quot;Book Antiqua&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+In this lab, <span><span class="auto-style2">both</span>&nbsp;</span></span><b style="box-sizing: border-box; font-weight: 700; color: rgb(51, 51, 51); font-family: &quot;Book Antiqua&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">statement 
+and branch coverage</b><span style="color: rgb(51, 51, 51); font-family: &#39;Book Antiqua&#39;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none; background-color: rgb(255, 255, 255)">&nbsp;</span><span style="color: rgb(51, 51, 51); font-family: &quot;Book Antiqua&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">must 
+be achieved<span>&nbsp;</span></span><span style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Book Antiqua&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; background-color: rgb(255, 255, 0);">at 
+least 90%</span><span style="color: rgb(51, 51, 51); font-family: &quot;Book Antiqua&quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">.</span></p>
+    <p align="LEFT"><font face="Book Antiqua"><b>5. Lab Report<br>
+</b>The Lab report must include (but not limit to) the following sections:</font></p>
+<ul>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Plan: briefly describe test 
+		requirements, planed test activities, <b>approach</b>, and success criteria for the test.</font></p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Design : for the method under test 
+	(MUT), <font color="#FF0000">using basis path or graph 
+	coverage for source code to design test cases.</font> In addition to test 
+	inputs and expected outputs , you have to provide the details of the test 
+	case design using the templates. Note that, you need to provide the
+	<span style="background-color: #FFFF00">CFG</span> and corresponding 
+	<span style="background-color: #FFFF00">test paths</span> for each MUT. <b>A test case 
+	design template for Graph Coverage can be downloaded
+	<a href="https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab3/Lab3%20(Graph%20Coverage%20%20test%20case%20design).xlsx">here</a>.</b>
+    <br>
+    The figure below is an example of CFG. Please note that you must label the conditions 
+	on the CFG and show the blocks of corresponding statements in source code.
+    <img border="0" style="width:80%;" src="./Lab3_files/cfg.png">
+    </font>
+    </p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Result: for each method under test 
+	(MUT), provide the test results (in 
+		terms of Pass/Fail or screenshots for each test case associated with the 
+		method under test.</font></p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Coverage: provide statement 
+	and branch code coverage for each method under 
+		test and the overall statement and branch coverage for the test. </font></p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">The Coverage Comparison of your 
+	Lab1, Lab2 and Lab3, including statement and branch coverage 
+	analysis. </font></p></li>
+	<li>
+        <p align="LEFT"><font face="Book Antiqua">The screenshots of <code>CI/CD -&gt; Pipelines</code> and 3 or more of you different CI status.</font>
+    </p></li>
+</ul>
+<p align="LEFT"><b><font face="Book Antiqua">You can reference the sample report 
+<a href="https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab3/Lab3Report.docx">here</a>.</font></b><font face="Book Antiqua">  </font></p>
+
+
+<p>
+    <font face="Book Antiqua">
+        <span style="background-color: #FFFF00">Please convert your Lab report to <code>.pdf</code> file, <code>.docx</code> file will not be accepted.</span>
+        <br>
+        The Lab report and ISP test case design document must be put in the corresponding directory in your project (e.g. <code>GeoProject -&gt; LabReport -&gt; Lab3</code>).
+        <br>
+        Make sure you have pushed your code and Lab report on the 
+	<a target="_blank" href="https://course.selab.ml/stv-gitlab/">GitLab</a> successfully.
+        <br>
+    </font>
+</p>
+</div>
+<div class="container">
+    <font face="Book Antiqua">
+    Finally, 
+    </font> 
+    <font face="Book Antiqua" style="background-color: #FFFF00">
+        you must open an new <b>issue</b> on 
+<a target="_blank" href="https://course.selab.ml/stv-gitlab/TA/GeoProject">TA's GeoProject</a> to notify TA that you have done your lab.
+    </font><font face="Book Antiqua">&nbsp;<b>TA would check your homework on gitlab.</b> </font>
+</div>
+
+
+
+
+
+</body></html>

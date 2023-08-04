@@ -1,0 +1,329 @@
+
+<!-- saved from url=(0080)https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab1/Lab1.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
+    
+    <meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+    <link rel="stylesheet" href="./Lab1_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="./Lab1_files/bootstrap.min.js.下載" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Software Testing Lab1</title>
+	<style type="text/css">
+.auto-style1 {
+	font-family: "Book Antiqua";
+}
+</style>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+
+<body>
+    <div class="container">
+
+        <h2>
+            <font face="Book Antiqua">Lab 1. JUnit</font>
+        </h2>
+        <h4>
+            <font face="Book Antiqua">Lab Objective:</font>
+        </h4>
+        <font face="Book Antiqua">This Lab aims to help students to gain the experience of unit testing and to learn the widely used unit testing tool,
+            the JUnit test framework. </font>
+        <br>
+        <p>
+            <b>
+                <font face="Book Antiqua">1. SUT</font>
+            </b>
+            <font face="Book Antiqua">
+                <b> Description:</b>
+            </font>
+            <font face="Book Antiqua" color="#0000FF">
+                <b>
+                    <br>
+                </b>
+            </font>
+            <font face="Book Antiqua">The system to be tested for this lab is Geo, an open source Java framework for geohashing. You can download
+                <b>
+                </b>
+                <a target="_blank" href="https://course.selab.ml/stv-gitlab/TA/GeoProject">GeoProject</a> form our GitLab
+                <b>. </b>
+            </font>
+        </p>
+
+        <p>
+            <font face="Book Antiqua">Please go to the 
+                <a target="_blank" href="https://course.selab.ml/stv-gitlab/users/sign_in">GitLab</a>
+                of our course and register your account.
+            </font>
+        </p>
+        <p class="auto-style1">
+            Use your full name (e.g., 王小明) and student ID (e.g., 107598001) to 
+			register.
+        </p>
+        <p align="center">
+            <img border="0" style="width:90%;" src="./Lab1_files/gitlab_register.png">
+        </p>
+        <font face="Book Antiqua">After registering, please sign in and 
+            <b>fork </b> the 
+            <a target="_blank" href="https://course.selab.ml/stv-gitlab/TA/GeoProject">GeoProject</a>
+            into your account.
+        </font>
+        <p align="center">
+            <img border="0" style="width:90%;" src="./Lab1_files/fork_project.png">
+        </p>
+        <p>
+            <font face="Book Antiqua">Also, please install
+                <a href="https://git-scm.com/">git</a> on your computer. The Git tutorial can be found in 
+                <a href="https://git-scm.com/docs/gittutorial">this website</a>.</font>
+        </p>
+
+        <p>
+            <font face="Bodoni MT">
+                <span style="background-color: #FFFF00">In the setting of 
+			project
+                <code>Members</code>, please add the account of TA as <b>Developer</b> 
+			to your project (</span> as shown below).
+            </font>
+        </p>
+        <p align="center">
+            <img border="0" style="width:80%;" src="./Lab1_files/member.png">
+        </p>
+
+        <p>
+            <font face="Book Antiqua">
+                <span style="background-color: #FFFF00">
+                    To prevent others from accessing your project, you have to set the project visibility to <code>Private</code> in <code>Setting -&gt; General -&gt; General -&gt; Permissions -&gt; Project visibility</code>.
+                </span>
+            </font>
+        </p>
+        <p align="center">
+            <img border="0" style="width:90%;" src="./Lab1_files/gitlab_private.png">
+        </p>    
+
+        <font face="Book Antiqua">
+            <br>
+            <p>
+                To show the pipeline and coverage badge on README, you need to follow the settings below.
+                <br>
+                <span style="background-color: #FFFF00">In your own GeoProject repository, go to
+                    <code>
+	<font face="Calibri" color="#FF0000">Setting -&gt; CI/CD -&gt; General pipelines settings</font> </code> and copy the code of Pipeline status and Coverage report to
+                    <b>README.md.</b>
+                </span>
+                <br>
+            </p>
+            <p align="center">
+                <img border="0" style="width:90%;" src="./Lab1_files/CICD.png">
+            </p>
+            <p align="center">
+                <img border="0" style="width:90%;" src="./Lab1_files/readme.png">
+            </p>
+            <br>
+            <font face="Book Antiqua">
+                <span style="background-color: #FFFF00">
+                    At
+                    <code>Setting -&gt; CI/CD -&gt; General pipelines settings -&gt; Test coverage parsing</code>
+                    , set your coverage parsing to
+                </span>
+                <code>Total.*?([0-9]{1,3})%</code> .
+            </font>
+            <br>
+            <br>
+            <p align="center">
+                <img border="0" style="width:90%;" src="./Lab1_files/parsing.png">
+            </p>
+            <br>
+            <p>Then you will see the pipeline status and coverage information on the index of project.
+                <br>
+            </p>
+            <p align="center">
+                <img border="0" style="width:90%;" src="./Lab1_files/status.png">
+            </p>
+            <br>
+            <p>It will run CI and update the status information automatically after pushing your code to GitLab.</p>
+            <br>
+            
+        </font>
+
+        <p>
+            <font face="Book Antiqua">
+                <b>2. Test Environment
+                    <br>
+                </b>
+                Please use 
+                <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> as you IDE, and <code>import</code> the GeoProject as follow:
+            </font>
+        </p>
+        <p align="center">
+        <img border="0" style="width:70%;" src="./Lab1_files/idea_starup.png">
+        </p>
+        <p align="center">
+        <img border="0" style="width:70%;" src="./Lab1_files/idea_import_from_gradle.png">
+        </p>
+
+        <p>
+            <font face="Book Antiqua">
+                <b>3. Test Suite Generation
+                    <br>
+                </b>
+            You will be required to implement some unit tests for several classes in this project according to the specifications. </font>
+            <br>
+            <font face="Book Antiqua">You can create a test as the figures below:
+            </font>
+            <br>
+            </p><p align="center">
+            <img border="0" style="width:90%;" src="./Lab1_files/generate_test.png">
+            </p>
+        <p></p>
+        <p>
+            <font face="Book Antiqua">And select testing library for
+                <span style="color:red">JUnit4</span>(please clicked Fixed button if JUnit4 library not found in the module)
+            </font>
+            <br>
+            </p><p align="center">
+            <img border="0" style="width:50%;" src="./Lab1_files/create_test.png">
+            </p>
+        <p></p>
+        <p>
+            <font face="Book Antiqua">While designing and implementing your test cases, you may need to look up some information of each class in the 
+                <a href="http://davidmoten.github.io/geo/apidocs/index.html" target="_blank">
+                    Javadoc of GeoProject</a>.
+            </font>
+        </p>
+        <ul>
+            <li>
+                <font face="Book Antiqua">Base32 (in the com.github.davidmoten.geo): Has 5 methods
+                </font>
+            </li>
+            <li>
+                <font face="Book Antiqua">Coverage (in the com.github.davidmoten.geo): Has 5 methods
+                </font>
+            </li>
+            <li>
+                <font face="Book Antiqua">CoverageLongs (in the com.github.davidmoten.geo): Has 5 methods
+                </font>
+            </li>
+            <li>
+                <font face="Book Antiqua">GeoHash (in the com.github.davidmoten.geo): Has 23 methods
+                </font>
+            </li>
+            <li>
+                <font face="Book Antiqua">Geomem (In com.github.davidmoten.geo.mem): Has 6 methods
+                </font>
+            </li>
+            <li>
+                <font face="Book Antiqua">Info (In com.github.davidmoten.geo.mem): Has 6 methods
+                </font>
+            </li>
+        </ul>
+        <p>
+            <font face="Book Antiqua">
+                <b>4. Test Plan</b>
+                <br> To begin with, a test plan must be created first. You must document the test plan in your lab report.
+                The test plan should include a brief description about the requirements of the test, the
+                <u>strategy</u> and
+                <u>activities</u> you plan to perform to meet the requirements, and the criteria to complete the test. (one
+                page would be sufficient for the test plan)</font>
+        </p>
+        <p>
+            <font face="Book Antiqua">Carry out your test plan. To keep your workload manageable, we would like you to create test cases for <b>15</b> out
+                of 50 methods (38 methods of com.github.davidmoten.geo and 12 methods of com.github.davidmoten.geo.mem).
+                Choose <span style="background-color: #FFFF00">15 methods</span> to test and create test cases for them. Try to keep each test case in a separate JUnit
+                test method if possible. </font>
+        </p>
+        <p>
+            <font face="Book Antiqua">
+                Push your code to the repository when part of the project is doon. And observe the status of CI. You shoule do that at least <span style="background-color: #FFFF00">three
+                        or more times</span>.
+            </font>
+        </p>
+        <p>
+            <font face="Book Antiqua">
+                <b>5. Code Coverage</b>
+                <br>
+                </font></p><p><font face="Book Antiqua">
+                    Click</font>
+            <font face="Calibri" color="#FF0000"> </font>
+            <font face="Book Antiqua">
+                <font color="#FF0000">
+                    <code><font face="Calibri">View -&gt; Tools Windows -&gt; Gradle</font></code>
+                    <font face="Calibri"> </font>
+                </font>to Open gradle tool windows.
+                </font></p><font face="Book Antiqua">
+                You can create your code coverage report by clicking the buttons in order <code>test</code> -&gt; <code>jacocoTestReport</code>.</font>
+            <br>
+            <p align="center">
+            <img width="80%" src="./Lab1_files/jacoco_test.png">
+            </p>
+        <p></p>
+        <p>
+            <font face="Book Antiqua">After doing the previous tasks, you should get the test report in the directory <code>build -&gt; jacocoHtml -&gt; index.html</code>.</font>
+            <br>
+            </p><p align="center">
+            <img width="300" src="./Lab1_files/jacoco_report_pos.png">
+            <br>
+            </p>
+        <p></p>
+        <p>
+            <font face="Book Antiqua">You can open the <code>index.html</code> file in browser, it may look like the following figure.</font>
+            <br>
+            </p><p align="center">
+            <img width="80%" src="./Lab1_files/jacoco_report_html.png">
+            </p>
+        <p></p>
+        <p>
+            <font face="Book Antiqua">
+                <b>6. Lab Submission
+                    <br>
+                </b>
+                The Lab report must include (but not limit to) the following sections: (
+                <a href="https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab1/Lab1Report.docx">sample Lab report</a>)</font>
+            </p><p>
+                <font face="Book Antiqua">1. Test Plan: briefly describe test requirements, planed test activities, and success criteria for the test.
+                    <br> 2. Test Design : for the method under test, provide the objective, input, and expected output of the
+                    test cases.
+                    <br> 3. Test Result: for each method under test, provide the test results (in terms of Pass/Fail or screenshots
+                    for each test case associated with the method under test.
+                    <br> 4. Test Coverage: provide statement code coverage for each method under test and the overall statement
+                    coverage for the test.
+                    <br> 5. The screenshots of
+                    <font color="#FF0000">CI/CD -&gt; Pipelines</font>
+                    for showing 3 or more of different CI testing.</font>
+            </p>
+            <p>
+                <font face="Book Antiqua">
+                    Please convert your Lab report to <code>.pdf</code> file, <code>.docx</code> file will not be accepted.
+                    <br>
+                    The Lab report must put in the corresponding directory in your project (e.g. <code>GeoProject -&gt; LabReport -&gt; Lab1</code>).
+                    <br>
+                    Make sure you have pushed your code and Lab report on the 
+				<a target="_blank" href="https://course.selab.ml/stv-gitlab/">GitLab</a> successfully.
+                    <br>
+                </font>
+            </p>
+
+            <p>
+                <font face="Book Antiqua">
+                Finally, 
+                </font> 
+                <font face="Book Antiqua" style="background-color: #FFFF00">
+                    you must open an new <b>issue</b> on 
+				<a target="_blank" href="https://course.selab.ml/stv-gitlab/TA/GeoProject">TA's GeoProject</a> with the following information and format to notify TA that you have done your lab.
+                </font>
+                </p><p align="center">
+                    <img width="80%" src="./Lab1_files/gitlab_issue.png">
+                </p>
+                <p align="center">
+                    <img width="80%" src="./Lab1_files/issue_detail.png">
+                </p>
+            <p></p>
+
+            <p>
+                <font face="Book Antiqua">
+                    <b>TA would check your homework on GitLab.</b>
+                </font>
+            </p>
+
+        <p></p>
+
+    </div>
+
+
+</body></html>

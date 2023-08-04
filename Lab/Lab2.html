@@ -1,0 +1,156 @@
+
+<!-- saved from url=(0080)https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab2/Lab2.htm -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=Big5">
+
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<link rel="stylesheet" href="./Lab2_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="./Lab2_files/bootstrap.min.js.下載" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>Software Testing Lab2</title>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+
+<body>
+<div class="container">
+<p class="MsoNormal" align="center"><b><font face="Book Antiqua">Lab 2 Test 
+Design Techniques (ISP)</font></b></p>
+<p><b><font face="Book Antiqua">Lab</font></b><font face="Book Antiqua"><b> Objective:</b><br>
+This lab aims to help students learning the concepts and practicing the skills of 
+test case design using <b>input space partitioning (ISP)</b>. <br>
+</font></p>
+<p><b><font face="Book Antiqua">1. SUT</font></b><font face="Book Antiqua"><b> Description:</b></font><font face="Book Antiqua" color="#0000FF"><b> 
+<br>
+</b></font><font face="Book Antiqua">Similar to Lab1, the project to be tested for this lab is
+        Geo, an open source Java framework for geohashing.
+        <br>
+        Please keep developing new test code in your Lab 1 repository which should already been created on 
+<a target="_blank" href="https://course.selab.ml/stv-gitlab/">GitLab</a>, <span style="background-color: #FFFF00">DO NOT create or fork another new repository</span> in this lab.</font></p>
+    <p><b>
+<font face="Book Antiqua">
+    2. Test Environment<br>
+</font></b><font face="Book Antiqua">The test environment will be <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>.
+        You should import the project which forked and add all the libraries imported by gradle. Also, you need to  
+use JUnit4 as your unit testing framework.&nbsp;
+    </font></p>
+<p><font face="Book Antiqua"><b>3. Test Suite Generation<br>
+</b>In this lab, you are required to design and implement unit tests for the following classes by using the
+<span style="background-color: #FFFF00"><font color="#FF0000"> Input Space Partitioning (ISP)</font></span> technique to 
+ increase the statement and branch coverage of Lab1. </font></p>
+    <ul>
+        <li>
+            <font face="Book Antiqua">Base32 (in the com.github.davidmoten.geo): Has 5 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">Coverage (in the com.github.davidmoten.geo): Has 5 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">CoverageLongs (in the com.github.davidmoten.geo): Has 5 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">GeoHash (in the com.github.davidmoten.geo): Has 23 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">Geomem (In com.github.davidmoten.geo.mem): Has 6 methods
+			</font>
+        </li>
+        <li>
+            <font face="Book Antiqua">Info (In com.github.davidmoten.geo.mem): Has 6 methods
+			</font>
+        </li>
+    </ul>
+    <p><font face="Book Antiqua">Take a minute going through the API
+        specifications of each class described above in
+        <a href="http://davidmoten.github.io/geo/apidocs/index.html" target="_blank">
+            Javadoc</a>.
+    </font>
+    </p>
+<p><font face="Book Antiqua"><b>4. Test Plan</b></font><br>
+<font face="Book Antiqua">To begin with, a plan must be created. You must document the test plan in your lab report. The plan must include 
+a brief description about the requirements of the test (such as the goal of 
+statement or branch coverage), the <u>strategy</u> and <u>activities</u> you plan to perform to meet the 
+requirements, <b>the <u>approach</u> to achieve the goal (such as using Input Space 
+Partitioning and and All Combination Coverage)</b>, and <b>the <u>success criteria</u></b> of completing the test (such as 
+satisfying the coverage goal). (one page would be sufficient for the test plan)</font></p>
+    <p><font face="Book Antiqua">Carry out your test plan. To keep your
+        workload manageable, you are required to create test cases for <span style="background-color: #FFFF00"><b>15</b></span> out 
+	of 50 methods (38 methods of com.github.davidmoten.geo
+        and 12 methods of com.github.davidmoten.geo.mem) <span style="background-color: #FFFF00">at least</span>. Choose 
+	<span style="background-color: #FFFF00"><b>15</b></span> methods and create test cases for them. Some of the chosen methods can be the 
+	same as Lab 1. Try
+        to keep each test case
+        in a separate testing method if possible. </font>
+    </p>
+    <p>
+        <font face="Book Antiqua">
+             Push your code to GitLab after a part of tests is done. By doing so, you can see the incremental change of testing coverage from CI status.
+             <br>
+             You must push your code to GitLab and ensure that the CI is running successfully for at least <span style="background-color: #FFFF00">three or more times</span>.
+         </font>
+     </p>
+     <p>
+        <font face="Book Antiqua">
+            In this lab, the <b>statement coverage</b> must be achieved <span style="background-color: #FFFF00">at least 70%</span>.
+        </font>
+    </p>
+    <p align="LEFT"><font face="Book Antiqua"><b>5. Lab Report<br>
+</b>The Lab report must include (but not limit to) the following sections:</font></p>
+<ul>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Plan: briefly describe test 
+		requirements, planed test activities, <b>approach</b>, and success criteria for the test.</font></p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Design : for the method under test 
+	(MUT), <font color="#FF0000">using input space partitioning (ISP).</font> In addition to test 
+	inputs and expected outputs , you have to provide the details of the test case 
+	design using the templates. Note that for using ISP, you need to provide the 
+	<span style="background-color: #FFFF00">characteristics</span> and corresponding 
+	<span style="background-color: #FFFF00">partitions</span> for each MUT. <b>A test case design template for ISP can be downloaded
+	<a href="https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab2/Lab2%20(ISP%20test%20case%20design).xlsx">here</a>.</b> </font></p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Result: for each method under test, provide the test results (in 
+		terms of Pass/Fail or screenshots for each test case associated with the 
+		method under test.</font></p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">Test Coverage: provide statement code coverage 
+	(or branch coverage) for each method under 
+		test and the overall statement coverage (or branch coverage) for the test. </font></p></li>
+	<li>
+	<p align="LEFT"><font face="Book Antiqua">The Coverage Comparison of your 
+	Lab1 and Lab2, including statement coverage (or branch coverage) 
+    analysis. </font></p></li>
+    <li>
+        <p align="LEFT"><font face="Book Antiqua">The screenshots of <code>CI/CD -&gt; Pipelines</code> and 3 or more of you different CI status.</font>
+    </p></li>
+</ul>
+<p align="LEFT"><font face="Book Antiqua">You can reference the sample of Lab 
+report submission <a href="https://istudy.ntut.edu.tw/base/10001/course/10086823/content/labs/Lab2/Lab2Report.docx">here</a>  </font></p>
+
+<p>
+    <font face="Book Antiqua">
+        <span style="background-color: #FFFF00">Please convert your Lab report to <code>.pdf</code> file, <code>.docx</code> file will not be accepted.</span>
+        <br>
+        The Lab report and ISP test case design document must be put in the corresponding directory in your project (e.g. <code>GeoProject -&gt; LabReport -&gt; Lab2</code>).
+        <br>
+        Make sure you have pushed your code and Lab report on the 
+	<a target="_blank" href="https://course.selab.ml/stv-gitlab/">GitLab</a> successfully.
+        <br>
+    </font>
+</p>
+<p>
+    <font face="Book Antiqua">
+    Finally, 
+    </font> 
+    <font face="Book Antiqua" style="background-color: #FFFF00">
+        you must open an new <b>issue</b> on 
+	<a target="_blank" href="https://course.selab.ml/stv-gitlab/TA/GeoProject">TA's GeoProject</a> to notify TA that you have done your lab.
+    </font><font face="Book Antiqua">&nbsp;<b>TA would check your homework on gitlab.</b> </font>
+</p>
+</div>
+
+
+
+</body></html>
